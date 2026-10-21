@@ -3,11 +3,13 @@ name: Run Tests
 on: [push, pull_request]
 
 jobs:
-  test:
+  test-main:
+    name: Run all tests on main branch
+    if: github.ref == 'refs/heads/main' || (github.event_name == 'pull_request' && github.base_ref == 'main')
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Check out repository
         uses: actions/checkout@v4
 
       - name: Set up Node.js
@@ -20,6 +22,12 @@ jobs:
 
       - name: Run all unit tests
         run: npm test
+
+      - name: Run a single test class
+        run: npx jest TaskManager
+
+      - name: Run a single test
+        run: npx jest TaskManager --testNamePattern="should add a task and return it with an id"
 
       - name: Run tests with coverage
         run: npm run coverage
