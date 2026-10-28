@@ -35,6 +35,7 @@ A JavaScript Task Manager application built for the DevOps module at Atlantic Te
 This project follows a **feature branch workflow**:
 
 - `main` — stable, production-ready code only. **No direct pushes.**
+- `develop` — integration branch for features and fixes. All PRs are merged here first.
 - `feature/<issue-number>-<short-description>` — one branch per feature or task (e.g. `feature/3-add-unit-tests`)
 - `fix/<issue-number>-<short-description>` — for bug fixes (e.g. `fix/7-correct-task-validation`)
 
