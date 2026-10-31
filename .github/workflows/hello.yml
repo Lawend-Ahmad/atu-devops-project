@@ -2,8 +2,8 @@ name: ATU CI Workflow
 
 on: 
   pull_request:
-  branches:
-    -main
+    branches:
+      -main
 
 jobs:
   hello:
