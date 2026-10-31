@@ -1,0 +1,25 @@
+{
+  "name": "atu-devops-project",
+  "version": "1.0.0",
+  "description": "A JavaScript Task Manager application built for the DevOps module at Atlantic Technological University (ATU), Galway. This project demonstrates CI/CD pipelines, automated testing, GitHub Actions, and Agile project management practices.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lawend-Ahmad/atu-devops-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Lawend-Ahmad/atu-devops-project/issues"
+  },
+  "homepage": "https://github.com/Lawend-Ahmad/atu-devops-project#readme",
+  "devDependencies": {
+    "jest": "^30.5.2"
+  }
+}
