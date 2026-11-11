@@ -32,19 +32,20 @@ A JavaScript Task Manager application built for the DevOps module at Atlantic Te
 
 ## Branching Strategy
 
-This project follows a **feature branch workflow**:
+This project follows a **Git Flow branching strategy**:
 
-- `main` — stable, production-ready code only. **No direct pushes.**
-- `develop` — integration branch for features and fixes. All PRs are merged here first.
+- `main` — stable, production-ready code only, tagged releases land here.**No direct pushes.**
+- `develop` — integration branch for features and fixes, used for testing before merging to `main`.
+- `release/<version>` — a snapshot of `develop` that gets stabilised before merging to `main` (e.g. `release/1.0.0`).
 - `feature/<issue-number>-<short-description>` — one branch per feature or task (e.g. `feature/3-add-unit-tests`)
 - `fix/<issue-number>-<short-description>` — for bug fixes (e.g. `fix/7-correct-task-validation`)
 
 **Rules:**
 1. Every change goes through a Pull Request — never commit directly to `main`.
 2. Every PR references at least one GitHub Issue.
-3. Commits follow the Conventional Commits format: `type(scope): #issue description`
-   - Example: `feat(tasks): #3 add TaskManager class`
-   - Example: `test(tasks): #4 add unit tests for TaskManager`
+3. Commits follow the Conventional Commits format: `type (scope): #issue description`
+   - Example: `feat (tasks): #3 add TaskManager class`
+   - Example: `test (tasks): #4 add unit tests for TaskManager`
 
 ---
 
@@ -52,12 +53,14 @@ This project follows a **feature branch workflow**:
 
 ```
 atu-devops-project/
+├── .github/
+│   └── workflows/          # GitHub Actions CI pipelines
+├── docs/
+│   └── sbom.json           # Software Bill of Materials (SBOM)
 ├── src/
 │   └── TaskManager.js      # Main application class
 ├── tests/
 │   └── TaskManager.test.js # Unit tests
-├── .github/
-│   └── workflows/          # GitHub Actions CI pipelines
 ├── .gitignore
 ├── package.json
 └── README.md
