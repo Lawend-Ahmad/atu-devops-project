@@ -1,5 +1,3 @@
-'use strict';
-
 class TaskManager {
   constructor() {
     this.tasks = [];
