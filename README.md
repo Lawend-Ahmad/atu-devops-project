@@ -1,6 +1,6 @@
 # ATU DevOps Project
 
-A JavaScript Task Manager application built for the DevOps module at Atlantic Technological University (ATU), Galway. This project demonstrates CI/CD pipelines, automated testing, GitHub Actions, and Agile project management practices.
+A JavaScript Task Manager application built for the DevOps module at Atlantic Technological University (ATU), Letterkenny. This project demonstrates CI/CD pipelines, automated testing, GitHub Actions, and Agile project management practices.
 
 ---
 
