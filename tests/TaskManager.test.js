@@ -1,5 +1,3 @@
-'use strict';
-
 const TaskManager = require('../src/TaskManager');
 
 describe('TaskManager', () => {

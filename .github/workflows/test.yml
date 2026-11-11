@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+name: ATU CI Workflow
+
+on: 
+  pull_request:
+    branches:
+      - main
+
+  push:
+    branches:
+      - main
+
+jobs:
+  test-main:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+=======
 name: Run Tests
 
 on: [push, pull_request]
@@ -16,10 +41,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
+>>>>>>> origin/main
 
       - name: Install dependencies
         run: npm install
 
+<<<<<<< HEAD
+      - name: Run tests
+        run: npm test
+
+      - name: Run coverage
+        run: npm run coverage
+=======
       - name: Run all unit tests
         run: npm test
 
@@ -31,3 +64,4 @@ jobs:
 
       - name: Run tests with coverage
         run: npm run coverage
+>>>>>>> origin/main
